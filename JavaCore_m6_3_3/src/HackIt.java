@@ -9,6 +9,6 @@ public class HackIt {
         // ...
         Secret1 secret1 = new Secret1();
         secret1.getSecret();
-
+        //не сдан
     }
 }
