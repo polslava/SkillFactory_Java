@@ -1,4 +1,4 @@
-//import anotherfirm.*;
+import anotherfirm.*;
 
 public class HackIt {
 
@@ -7,8 +7,12 @@ public class HackIt {
         // from package "anotherfirm" here
         // The output will be the code to the excercise
         // ...
+
         Secret1 secret1 = new Secret1();
         secret1.getSecret();
         //не сдан
+        /*Secret secret = new Secret();
+        secret.getSecret();*/
     }
+
 }
