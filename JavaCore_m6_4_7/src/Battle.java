@@ -1,14 +1,16 @@
-class Battle{
+class Battle {
     int countZombie=0;
     String[] ZombieName = new String[5];
+
+
     //TODO
 
     public void add(Monster monster){
         if (countZombie<5)
         {
             //Zombie zombie=new Zombie();
-            System.out.println("Monster "+monster.name+" the Zombie was created");
-            ZombieName[countZombie]= monster.name;;
+            //System.out.println("Monster "+monster.name+" the Zombie was created");
+            ZombieName[countZombie]= monster.name;
             countZombie++;
         }else
         {
