@@ -54,6 +54,14 @@ But the Buttle class has ony one println "No more monsters!"
 
 */
 
+
+        /* Должна корректно работать и выводить:
+        Monster Alice the Zombie was created
+        Monster Bob the Zombie was created
+        Monster Alice the Zombie attacked with damage 5
+        Raaaauuughhhh Alice the Zombie growled
+        Monster Bob the Zombie attacked with damage 5
+        Raaaauuughhhh Bob the Zombie growled*/
     }
 
 }
