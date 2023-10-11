@@ -7,7 +7,8 @@ Make the class Battle (add your code there)
 to allow monsters to fight
 */
 
-        Battle battle = new Battle();
+        /*
+            Battle battle = new Battle();
         battle.add(new Zombie("Alice"));
         battle.add(new Zombie("Bob"));
         battle.add(new Zombie("Eve"));
@@ -17,6 +18,11 @@ to allow monsters to fight
         battle.add(new Zombie("Noname"));
         battle.add(new GiantSnake("Noname"));
 
+        battle.start();*/
+
+        Battle battle = new Battle();
+        battle.add(new Zombie("Alice"));
+        battle.add(new Zombie("Bob"));
         battle.start();
 
 /*

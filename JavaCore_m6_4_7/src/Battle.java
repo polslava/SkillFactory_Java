@@ -27,7 +27,7 @@ class Battle {
         attack();
     }
     void attack(){
-for (int i=0;i< ZombieName.length;i++)
+for (int i=0;i< countZombie;i++)
 {
     //Monster monster=new Monster(ZombieName[i], 5);
     //monster.attack();
