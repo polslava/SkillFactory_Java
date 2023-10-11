@@ -9,7 +9,7 @@ class Battle {
         if (countZombie<5)
         {
             //Zombie zombie=new Zombie();
-            //System.out.println("Monster "+monster.name+" the Zombie was created");
+            // System.out.println("Monster "+monster.name+" the Zombie was created");
             ZombieName[countZombie]= monster.name;
             countZombie++;
         }else
