@@ -1,8 +1,11 @@
 public class Car {
+    public int passengers;
     public int power;
     public void drive (){}
 public Car(){
-        this.power=100;
-        this.drive();
+        this.passengers=passengers;
+        this.power=power;
+
     }
+
 }
