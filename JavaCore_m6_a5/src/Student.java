@@ -7,7 +7,7 @@ public class Student extends Person{
         this.name=name;
         this.age=age;
         this.grade=grade;
-    }*/
+    } почему-то этот конструктор тестеру не нравится*/
 public Student (String name, int age){
         super(name, age);
 }
