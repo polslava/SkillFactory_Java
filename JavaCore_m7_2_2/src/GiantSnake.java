@@ -22,10 +22,11 @@ public class GiantSnake extends Monster {
         }
     }
 
-    //@Override
-    public void attack(){
+    @Override
+    public void attack(Monster monster){
         growl(true);
-        super.attack(); /*так и не понял как тут исправить*/
+        super.damage(getForce()); /*подсмотрел в 7.3.2*/ /*хотя в Zombie похожий сам решил, но отличаются*/
+        //super.attack(); /*так и не понял как тут исправить*/
         System.out.println("     ...and hid in the grass");
     }
 
