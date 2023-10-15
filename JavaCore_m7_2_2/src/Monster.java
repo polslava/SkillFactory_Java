@@ -26,7 +26,7 @@ public abstract class Monster {
 
     protected void growl() {
     }
-    abstract protected void attack(Monster monster);
+     protected abstract void attack(Monster monster);
     //{
        // System.out.println("Monster "+name+" attacked with damage "+force);
     //}

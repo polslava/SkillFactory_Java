@@ -1,5 +1,5 @@
-public class Zombie extends Monster {
-    //Fix this class
+public class Zombie extends Monster implements Fighter{
+
     public Zombie(String name) {
         super(name + " the Zombie", 5);
     }
@@ -9,11 +9,9 @@ public class Zombie extends Monster {
     }
 
     @Override
-    public void attack(Monster monster){
-        //super.attack(monster);
-        damage(monster.getHp());
+    public void attack(Entity entity){
+        Fighter.damage(getForce());
         growl();
     }
-
 
 }
