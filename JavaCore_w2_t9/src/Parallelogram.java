@@ -1,8 +1,9 @@
-public class Rhombuses extends Quadrangle implements Figure{
+public class Parallelogram extends Quadrangle implements Figure{
     public double alpha;
     public double beta;
-    public Rhombuses(int a, double alpha, double beta, String color) {
-        super(a, a, color);
+
+    public Parallelogram(int a, int b, double alpha, double beta, String color) {
+        super(a, b, color);
         this.alpha = alpha;
         this.beta = beta;
     }
@@ -27,19 +28,19 @@ public class Rhombuses extends Quadrangle implements Figure{
     @Override
     public double getLargeDiagonal() {
         double diagonal;
-        if(this.beta>this.alpha) {
-            diagonal = this.a * Math.sqrt(2 - 2 * Math.cos(this.beta));
-        } else {diagonal = this.a * Math.sqrt(2 - 2 * Math.cos(this.alpha));}
+        if(beta>alpha) {
+            diagonal = a * Math.sqrt(2 - 2 * Math.cos(beta));
+        } else {diagonal = a * Math.sqrt(2 - 2 * Math.cos(alpha));}
         return diagonal;
     }
 
     @Override
     public double getHeight() {
         double height;
-        if(this.beta>this.alpha) {
-            height = this.a*Math.sin(this.beta);
+        if(beta>alpha) {
+            height = a*Math.sin(beta);
         } else {
-            height = this.a*Math.sin(this.alpha);
+            height = a*Math.sin(alpha);
         }
         return height;
     }
