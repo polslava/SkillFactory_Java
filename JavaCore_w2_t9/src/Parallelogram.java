@@ -11,11 +11,8 @@ public class Parallelogram extends Quadrangle implements Figure{
     @Override
     public double area() {
         double area;
-        if(beta>alpha) {
-            area = Math.pow(a,2)*Math.sin(alpha);
-        } else {
-            area = Math.pow(a,2)*Math.sin(beta);
-        }
+
+            area = this.a*this.b*Math.sin(Math.toRadians(this.alpha));
 
         return area;
     }
@@ -29,19 +26,17 @@ public class Parallelogram extends Quadrangle implements Figure{
     public double getLargeDiagonal() {
         double diagonal;
         if(beta>alpha) {
-            diagonal = a * Math.sqrt(2 - 2 * Math.cos(beta));
-        } else {diagonal = a * Math.sqrt(2 - 2 * Math.cos(alpha));}
+            diagonal = Math.sqrt(Math.pow(this.a,2)+Math.pow(this.b,2) - 2 *this.a*this.b* Math.cos(Math.toRadians(this.beta)));
+        } else {diagonal = Math.sqrt(Math.pow(this.a,2)+Math.pow(this.b,2) - 2 *this.a*this.b* Math.cos(Math.toRadians(this.alpha)));
+        }
         return diagonal;
     }
 
     @Override
     public double getHeight() {
         double height;
-        if(beta>alpha) {
-            height = a*Math.sin(beta);
-        } else {
-            height = a*Math.sin(alpha);
-        }
+        height = this.a*Math.sin(Math.toRadians(this.alpha));
+
         return height;
     }
 

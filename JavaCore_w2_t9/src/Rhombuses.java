@@ -11,9 +11,9 @@ public class Rhombuses extends Quadrangle implements Figure{
     public double area() {
         double area;
         if(beta>alpha) {
-            area = Math.pow(a,2)*Math.sin(alpha);
+            area = Math.pow(a,2)*Math.sin(Math.toRadians(alpha));
         } else {
-            area = Math.pow(a,2)*Math.sin(beta);
+            area = Math.pow(a,2)*Math.sin(Math.toRadians(beta));
         }
 
         return area;
@@ -28,8 +28,8 @@ public class Rhombuses extends Quadrangle implements Figure{
     public double getLargeDiagonal() {
         double diagonal;
         if(this.beta>this.alpha) {
-            diagonal = this.a * Math.sqrt(2 - 2 * Math.cos(this.beta));
-        } else {diagonal = this.a * Math.sqrt(2 - 2 * Math.cos(this.alpha));}
+            diagonal = this.a * Math.sqrt(2 - 2 * Math.cos(Math.toRadians(this.beta)));
+        } else {diagonal = this.a * Math.sqrt(2 - 2 * Math.cos(Math.toRadians(this.alpha)));}
         return diagonal;
     }
 
@@ -37,9 +37,9 @@ public class Rhombuses extends Quadrangle implements Figure{
     public double getHeight() {
         double height;
         if(this.beta>this.alpha) {
-            height = this.a*Math.sin(this.beta);
+            height = this.a*Math.sin(Math.toRadians(this.beta));
         } else {
-            height = this.a*Math.sin(this.alpha);
+            height = this.a*Math.sin(Math.toRadians(this.alpha));
         }
         return height;
     }
