@@ -11,6 +11,9 @@ public class Main {
                 rectangle2.getColor().equals("Red") && rectangle2.getHeight() == 1 &&
                 rectangle2.getLargeDiagonal() == Math.sqrt(10) && rectangle2.area() == 3 && rectangle2.perimeter() == 8);
 */
+        System.out.println(Math.sin(120)); //0.5806111842123143
+        System.out.println((Math.sqrt(3))/2); //0.8660254037844386
+
         Rhombuses rhombuses = new Rhombuses(1, 60, 120, "Pink");
         Rhombuses rhombuses1 = new Rhombuses(1, 90, 90, "Pink");
         Rhombuses rhombuses2 = new Rhombuses(2, 60, 120, "Pink");
