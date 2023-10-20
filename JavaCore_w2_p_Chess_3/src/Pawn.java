@@ -14,15 +14,25 @@ public class Pawn extends ChessPiece{
         if (toLine!=line ) {
             if (toLine > 0 && toLine < 8 ) {
 
-                if (((toLine == line-2)&&(line==7)&& (this.getColor()=="White"))
+                /*if (((toLine == line-2)&&(line==6)&& (this.getColor()=="White"))
                         ||((toLine == line+2)&& (line==1)&& (this.getColor()=="Black"))){
                     return true;} else
                         if (((toLine==line-1)&& (this.getColor()=="White"))
                         ||((toLine == line+1)&& (this.getColor()=="Black"))){
                         return true;
-                        } else {return false;}
-                    } else {return false;}
+                        } else {return false;}*/ //проверял порядок ходов, где белые внизу массива, но тестер даёт ошибку
+
+
+                if (((toLine == line+2)&&(line==1)&& (this.getColor()=="White"))
+                        ||((toLine == line-2)&& (line==6)&& (this.getColor()=="Black"))){
+                    return true;} else
+                if (((toLine==line+1)&& (this.getColor()=="White"))
+                        ||((toLine == line-1)&& (this.getColor()=="Black"))){
+                    return true;
                 } else {return false;}
+
+                    } else {return false;}
+                } else {return false;} //проверял порядок ходов, где белые сверху массива, но тестер даёт ошибку
     }
 
     @Override
