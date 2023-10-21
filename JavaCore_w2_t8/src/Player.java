@@ -14,4 +14,3 @@ abstract public class Player {
     abstract public boolean doDamage();
 
 }
-/*не сдано: ошибка тестера*/
