@@ -9,4 +9,3 @@ public abstract class Transport {
     abstract public int getFuelLevel();
 
 }
-/*не сдано: тестер не работает*/
