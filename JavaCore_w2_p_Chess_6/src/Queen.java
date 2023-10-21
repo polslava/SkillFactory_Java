@@ -29,7 +29,7 @@ public class Queen extends ChessPiece{
             }
         }else {
             return false;
-        }
+        }//не сдано
     }
 
     @Override
