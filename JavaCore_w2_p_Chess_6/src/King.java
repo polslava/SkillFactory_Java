@@ -2,7 +2,9 @@ public class King extends ChessPiece{
     public King(String color) {
         super(color);
     }
-
+    public boolean isUnderAttack(ChessBoard board, int line, int column){
+        return false; // в ТЗ не указан признак для проверки
+    }
     @Override
     public String getColor() {
         return this.color;
