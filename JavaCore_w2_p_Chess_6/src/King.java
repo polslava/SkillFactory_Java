@@ -19,7 +19,7 @@ public class King extends ChessPiece{
                         ||((toColumn == column-0)&&((toLine==line-1)||(toLine==line+1)))
                         ||((toColumn == column+1)&&((toLine==line-1)||(toLine==line-0)||(toLine==line+1)))
 
-               // && (!isUnderAttack( chessBoard,  toLine,  toColumn))
+                && (!isUnderAttack( chessBoard,  toLine,  toColumn))
                 )
                 { return true;
                 } else {
