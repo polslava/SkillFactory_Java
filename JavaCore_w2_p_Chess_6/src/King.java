@@ -31,7 +31,7 @@ public class King extends ChessPiece{
         /*}else {
             return false;
         }*/
-        //не сдано
+
     }
 
     @Override
