@@ -23,7 +23,7 @@ public class Rook extends ChessPiece{
         }
     /*}
         else {return false;}*/
-    } //не сдано
+    }
 
 
     @Override
