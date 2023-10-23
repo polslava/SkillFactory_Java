@@ -12,7 +12,7 @@ public class Bishop extends ChessPiece{
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
         if (toLine!=line && toColumn!=column) {
-            if (toLine > 0 && toLine < 8 && toColumn > 0 && toColumn < 8) {
+            if (toLine >= 0 && toLine < 8 && toColumn >= 0 && toColumn < 8) {
                 if (((toLine -line) == (toColumn -column ))||
                 ((toLine -line) == -1*(toColumn -column ))) {
                     return true;}
@@ -24,7 +24,7 @@ public class Bishop extends ChessPiece{
         }
                     else {
                     return false;}
-//не сдано
+
     }
 
     @Override
