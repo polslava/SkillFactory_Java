@@ -2,7 +2,7 @@ public class King extends ChessPiece{
     public King(String color) {
         super(color);
     }
-    public boolean isUnderAttack(ChessBoard board, int line, int column){
+    public boolean isUnderAttack(ChessBoard chessBoard, int line, int column){
         return false; // в ТЗ не указан признак для проверки
     }
     @Override
@@ -12,13 +12,15 @@ public class King extends ChessPiece{
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        if (toLine!=line && toColumn!=column) {
-            if (toLine > 0 && toLine < 8 && toColumn > 0 && toColumn < 8) {
-                if ((((toLine == line + 1) || (toLine == line - 1))
-                        && ((toColumn <= column + 1) || (toColumn == column - 1)))
-                        ||
-                    ((toLine == line )
-                        && ((toColumn == column + 1) || (toColumn == column - 1))))
+        /*if (toLine!=line && toColumn!=column) {*/
+            if (toLine >= 0 && toLine < 8 && toColumn >= 0 && toColumn < 8) {
+                if (
+                        ((toColumn == column-1)&&((toLine==line-1)||(toLine==line-0)||(toLine==line+1)))
+                        ||((toColumn == column-0)&&((toLine==line-1)||(toLine==line+1)))
+                        ||((toColumn == column+1)&&((toLine==line-1)||(toLine==line-0)||(toLine==line+1)))
+
+               // && (!isUnderAttack( chessBoard,  toLine,  toColumn))
+                )
                 { return true;
                 } else {
                     return false;
@@ -26,9 +28,10 @@ public class King extends ChessPiece{
             } else {
                 return false;
             }
-        }else {
+        /*}else {
             return false;
-        }//не сдано
+        }*/
+        //не сдано
     }
 
     @Override
