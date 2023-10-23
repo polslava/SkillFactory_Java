@@ -10,14 +10,19 @@ public class Rook extends ChessPiece{
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        if (toLine!=line && toColumn!=column) {
-            if (toLine > 0 && toLine < 8 && toColumn > 0 && toColumn < 8) {
-                if (((toLine != line) && (toColumn == column ))
-                    || ((toLine == line) && (toColumn != column )))
-                {return true;}
-                else {return false;}}
-            else {return false;}}
-        else {return false;}
+        /*if (toLine!=line && toColumn!=column) {*/
+        if (toLine >= 0 && toLine < 8 && toColumn >= 0 && toColumn < 8) {
+
+            if ((((toLine != line) && (toColumn == column ))
+                    || ((toLine == line) && (toColumn != column ))))
+                { return true;}
+            else {
+                return false;}
+            } else {
+            return false;
+        }
+    /*}
+        else {return false;}*/
     } //не сдано
 
 
