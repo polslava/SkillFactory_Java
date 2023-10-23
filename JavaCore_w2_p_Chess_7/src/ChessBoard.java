@@ -20,7 +20,7 @@ public class ChessBoard {
                 if (board[startLine][startColumn].getSymbol().equals("K") ||  // check position for castling
                         board[startLine][startColumn].getSymbol().equals("R")) {
                     board[startLine][startColumn].check = false;
-                }
+                } //пометка после первого хода ладьи или короля для невозможности рокировки
 
                 board[endLine][endColumn] = board[startLine][startColumn]; // if piece can move, we moved a piece
                 board[startLine][startColumn] = null; // set null to previous cell
