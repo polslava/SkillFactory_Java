@@ -12,25 +12,28 @@ public class King extends ChessPiece{
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        /*if (toLine!=line && toColumn!=column) {*/
-            if (toLine >= 0 && toLine < 8 && toColumn >= 0 && toColumn < 8) {
+
+            if (toLine >= 0 && toLine < 8 && toColumn >= 0 && toColumn < 8) //движение в рамках доски
+            {
                 if (
                         ((toColumn == column-1)&&((toLine==line-1)||(toLine==line-0)||(toLine==line+1)))
                         ||((toColumn == column-0)&&((toLine==line-1)||(toLine==line+1)))
-                        ||((toColumn == column+1)&&((toLine==line-1)||(toLine==line-0)||(toLine==line+1)))
+                        ||((toColumn == column+1)&&((toLine==line-1)||(toLine==line-0)||(toLine==line+1))) //движение в радиусе 1 поля и не в тоже поле
 
                 && (!isUnderAttack( chessBoard,  toLine,  toColumn))
+                                && chessBoard.board[toLine][toColumn]==null
+
                 )
                 { return true;
                 } else {
-                    return false;
+                    if ( chessBoard.board[toLine][toColumn].getColor()!=chessBoard.board[line][column].getColor())
+                    {return true;} else
+                    {return false;}
                 }
             } else {
                 return false;
             }
-        /*}else {
-            return false;
-        }*/
+
 
     }
 
