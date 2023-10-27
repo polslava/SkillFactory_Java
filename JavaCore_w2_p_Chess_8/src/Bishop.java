@@ -32,25 +32,25 @@ public class Bishop extends ChessPiece{
 
     }
 
-    private boolean isClearDiagonal(ChessBoard chessBoard, int a1, int b1, int a2, int b2) {
+    private boolean isClearDiagonal(ChessBoard chessBoard,  int line, int column, int toLine, int toColumn) {
         int n=0;
         int m=0;
         boolean isClear = true;
-        for (int i = 1;i<=Math.abs(a2-a1);i=i+1){ //проверка наличия мешающих ходу фигур
-            if(a2>a1)
-            {n=a1+i;
-                if(b2>b1)
-                {m=b1+i;}else {m=b1-i;}
+        for (int i = 1;i<=Math.abs(toLine-line);i=i+1){ //проверка наличия мешающих ходу фигур
+            if(toLine>line)
+            {n=line+i;
+                if(toColumn>column)
+                {m=column+i;}else {m=column-i;}
             }else{
-                n=a1-i;
-                if(b2>b1)
-                {m=b1+i;}else {m=b1-i;}}
+                n=line-i;
+                if(toColumn>column)
+                {m=column+i;}else {m=column-i;}}
             if (chessBoard.board[n][m]==null)
             {isClear=true;}
             else
             {
-                if (n==a2 && m==b2
-                        && chessBoard.board[a2][b2].getColor()!=chessBoard.board[a1][b1].getColor())
+                if (n==toLine && m==toColumn
+                        && chessBoard.board[toLine][toColumn].getColor()!=chessBoard.board[line][column].getColor())
                 {isClear=true;} else {isClear=false;}//проверка противника в конечной точке
             }
 

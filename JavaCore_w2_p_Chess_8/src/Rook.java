@@ -31,33 +31,33 @@ public class Rook extends ChessPiece{
         }
 
     }
-    boolean isClearLine(ChessBoard chessBoard,int a1, int b1, int a2, int b2){ //проверка по строке
+    boolean isClearLine(ChessBoard chessBoard,int line, int column, int toLine, int toColumn){ //проверка по строке
         int n=0;
         boolean isClear = true;
-        for (int i = 1;i<=Math.abs(a2-a1);i=i+1){ //проверка наличия мешающих ходу фигур
-            if(a2>a1){n=a1+i;}else{n=a1-i;}
-            if (chessBoard.board[n][b1]==null)
+        for (int i = 1;i<=Math.abs(toLine-line);i=i+1){ //проверка наличия мешающих ходу фигур
+            if(toLine>line){n=line+i;}else{n=line-i;}
+            if (chessBoard.board[n][column]==null)
             {isClear=true;}
             else
             {
-             if (n==a2
-             && chessBoard.board[a2][b2].getColor()!=chessBoard.board[a1][b1].getColor())
+             if (n==toLine
+             && chessBoard.board[toLine][toColumn].getColor()!=chessBoard.board[line][column].getColor())
              {isClear=true;} else {isClear=false;}//проверка противника в конечной точке
             }
 
             }
         return isClear;
         }
-    boolean isClearColumn(ChessBoard chessBoard,int a1, int b1, int a2, int b2){ //проверка по колонке
+    boolean isClearColumn(ChessBoard chessBoard,int line, int column, int toLine, int toColumn){ //проверка по колонке
         int n=0;
         boolean isClear = true;
-        for (int i = 1;i<=Math.abs(b2-b1);i=i+1){ //проверка наличия мешающих ходу фигур
-            if(b2>b1){n=b1+i;}else{n=b1-i;}
-            if (chessBoard.board[a1][n]==null)
+        for (int i = 1;i<=Math.abs(toColumn-column);i=i+1){ //проверка наличия мешающих ходу фигур
+            if(toColumn>column){n=column+i;}else{n=column-i;}
+            if (chessBoard.board[line][n]==null)
             {isClear=true;}
             else {
-                if (n==b2
-                        && chessBoard.board[a2][b2].getColor()!=chessBoard.board[a1][b1].getColor())
+                if (n==toColumn
+                        && chessBoard.board[toLine][toColumn].getColor()!=chessBoard.board[line][column].getColor())
                 {isClear=true;} else {isClear=false;}//проверка противника в конечной точке
             }
 
