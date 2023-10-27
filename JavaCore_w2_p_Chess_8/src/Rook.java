@@ -42,7 +42,7 @@ public class Rook extends ChessPiece{
             {
              if (n==toLine
              && chessBoard.board[toLine][toColumn].getColor()!=chessBoard.board[line][column].getColor())
-             {isClear=true;} else {isClear=false;}//проверка противника в конечной точке
+             {isClear=true;} else {isClear=false;return isClear;}//проверка противника в конечной точке
             }
 
             }
@@ -58,7 +58,7 @@ public class Rook extends ChessPiece{
             else {
                 if (n==toColumn
                         && chessBoard.board[toLine][toColumn].getColor()!=chessBoard.board[line][column].getColor())
-                {isClear=true;} else {isClear=false;}//проверка противника в конечной точке
+                {isClear=true;} else {isClear=false;return isClear;}//проверка противника в конечной точке
             }
 
         }

@@ -51,7 +51,7 @@ public class Bishop extends ChessPiece{
             {
                 if (n==toLine && m==toColumn
                         && chessBoard.board[toLine][toColumn].getColor()!=chessBoard.board[line][column].getColor())
-                {isClear=true;} else {isClear=false;}//проверка противника в конечной точке
+                {isClear=true;} else {isClear=false;return isClear;}//проверка противника в конечной точке
             }
 
         }
