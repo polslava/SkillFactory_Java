@@ -4,28 +4,30 @@ public class Vector2D extends Vector{
         super(x1, y1, 0, x2, y2, 0);
     }
     public double cosinus;
-    public double getVectorX(){
+    public int getVectorX()
+    {
         return this.x2-this.x1;
     }
-    public double getVectorY(){
+    public int getVectorY(){
         return this.y2-this.y1;
     }
     @Override
     public double getLength() {
-        return Math.sqrt(Math.pow(this.x1-this.x2,2) + Math.pow(this.y1-this.y2,2));
+
+        return Math.sqrt(Math.pow(this.getVectorX(),2) + Math.pow(this.getVectorY(),2));
     }
 
     @Override
     public String getVectorCords() {
-        return this.x1+", "+this.y1+", "+this.x2+", "+this.y2;
+        return (this.getVectorX())+" "+(this.getVectorY());
     }
     public double getScalarProduct(Vector2D vector){
-        return 0;
+        return (vector.getVectorX()*this.getVectorX())+(vector.getVectorY()*this.getVectorY());
     }
     public double getAngle(Vector2D vector){
-        cosinus = ((this.x2-this.x1) * (vector.x2-vector.x1) + (this.y2-this.y1) * (vector.y2-vector.y1) ) /
-            (Math.sqrt(Math.pow((this.x2-this.x1),2) + Math.pow((this.y2-this.y1),2 )) *
-                    Math.sqrt(Math.pow((vector.x2-vector.x1),2) + Math.pow((vector.y2-vector.y1),2 )));
+        cosinus = ((this.getVectorX() * vector.getVectorX()) + (this.getVectorY() * vector.getVectorY()) ) /
+            (Math.sqrt(Math.pow((this.getVectorX()),2) + Math.pow((this.getVectorY()),2 )) *
+                    Math.sqrt(Math.pow((vector.getVectorX()),2) + Math.pow((vector.getVectorY()),2 )));
         if (this.getLength()!=0 && vector.getLength()!=0){
             return cosinus;}
             else
