@@ -18,7 +18,7 @@ public class Main {
         System.out.println(programmer.getPosition());
 */
 
-        //не сдан
+
         /*LimitingRectangle r = new LimitingRectangle(new int[][] {{-1, -2}, {3, 4}});
         System.out.println(r.getWidth() +  " " + r.getHeight());
         System.out.println(r.getBorders());

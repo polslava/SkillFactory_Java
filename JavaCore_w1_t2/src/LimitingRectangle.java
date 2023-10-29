@@ -11,6 +11,7 @@ public class LimitingRectangle {
     public LimitingRectangle(int point[][]) {
         this.point = point;
     }
+
     public int getWidth()
     {
         int width=0;
@@ -19,8 +20,8 @@ public class LimitingRectangle {
         {
             pointX[i]=point[i][0];
         }
-         minX = Arrays.stream(pointX).min().getAsInt();
-         maxX = Arrays.stream(pointX).max().getAsInt();
+          minX = Arrays.stream(pointX).min().getAsInt();
+          maxX = Arrays.stream(pointX).max().getAsInt();
         //width = this.point[0][0]-this.point[1][0];
         width = maxX - minX;
         return width;
@@ -44,12 +45,14 @@ public class LimitingRectangle {
     public String getBorders()
     {
         String ar_str = "";
-        ar_str = "{{"+this.point[0][0]+","+this.point[0][1]+"},{"+this.point[1][0]+","+this.point[1][1]+"}}";
+
+
+        //ar_str = "{{"+this.point[0][0]+","+this.point[0][1]+"},{"+this.point[1][0]+","+this.point[1][1]+"}}";
 
         //ar_str = "{{"+minX+","+minY+"},{"+maxX+","+maxY+"}}";
 
         //ar_str = "-15"+","+"10"+","+"13"+","+"-14";
-
+        ar_str = minY+", "+maxY+", "+minX+", "+maxX;
 
         return ar_str;
     }
