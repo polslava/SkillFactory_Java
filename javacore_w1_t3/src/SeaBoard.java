@@ -3,14 +3,14 @@ public class SeaBoard {
 
 
     private String[][] field = new String[10][10];
-    public void SeaBoard()
+    public SeaBoard()
     {
-        FirstField();
+        FirstField(this.field);
     }
-    public void FirstField() {
+    public void FirstField(String[][] field) {
         for (int i = 0; i < 10; i = i + 1) {
             for (int j = 0; j < 10; j = j + 1) {
-                field[i][j] = ".";
+                this.field[i][j] = ".";
             }
         }
     }
