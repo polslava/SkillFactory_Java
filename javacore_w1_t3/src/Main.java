@@ -1,17 +1,148 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Opt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+/*
+        TicTacToe ticTacToe = new TicTacToe();
+        ticTacToe.getField();
 
-        // Press Ctrl+R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
 
-            // Press Ctrl+D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Cmd+F8.
-            System.out.println("i = " + i);
-        }
+        Arrays.deepToString(game.getField());
+                                         ^
+      game.checkGame();
+
+        symbol:   method checkGame()
+        game.makeMove(1, 1);
+
+        Arrays.deepToString(game.getField());
+                                         ^
+       game.makeMove(1, 1);
+
+        game.makeMove(1, 2);
+
+       Arrays.deepToString(game.getField());
+
+        game.makeMove(2, 2);
+
+        game.makeMove(3, 1);
+game.makeMove(3, 3);
+game.makeMove(2, 1);
+ Arrays.deepToString(game.getField());
+
+        game.makeMove(1, 1);
+
+        game.makeMove(3, 3);
+
+        game.makeMove(1, 2);
+
+        game.makeMove(3, 2);
+
+        game.makeMove(2, 2);
+
+       game.makeMove(3, 1);
+  Arrays.deepToString(game.getField());
+
+        game.makeMove(2, 2);
+
+        game.makeMove(3, 1);
+
+        game.makeMove(3, 2);
+
+        game.makeMove(2, 1);
+    game.makeMove(1, 2);
+
+       Arrays.deepToString(game.getField());
+
+        game.makeMove(1, 1);
+
+        game.makeMove(2, 2);
+
+        game.makeMove(1, 2);
+
+        game.makeMove(1, 3);
+
+        game.makeMove(2, 1);
+           game.makeMove(3, 1);
+                  Arrays.deepToString(game.getField());
+
+        game.makeMove(2, 2);
+
+        game.makeMove(1, 1);
+
+        game.makeMove(3, 1);
+
+        game.makeMove(1, 3);
+
+        game.makeMove(1, 2);
+
+        game.makeMove(3, 2);
+
+        game.makeMove(2, 1);
+
+        game.makeMove(2, 3);
+         game.makeMove(3, 3);
+                 Arrays.deepToString(game.getField());
+                  game.makeMove(1, 1);
+                  Arrays.deepToString(game.getField());
+                  game.checkGame();
+                  game.makeMove(1, 1);
+                  Arrays.deepToString(game.getField());
+                 game.makeMove(1, 1);
+
+        game.makeMove(1, 2);
+             Arrays.deepToString(game.getField());
+               game.makeMove(2, 2);
+            game.makeMove(3, 1);
+            game.makeMove(3, 3);
+                 game.makeMove(2, 1);
+                Arrays.deepToString(game.getField());
+                   game.makeMove(1, 1);
+            game.makeMove(3, 3);
+          game.makeMove(1, 2);
+         game.makeMove(3, 2);
+        game.makeMove(2, 2);
+         game.makeMove(3, 1);
+          Arrays.deepToString(game.getField());
+           */
+
+        SeaBoard board = new SeaBoard();
+        board.shoot(0, 0, "m");
+        board.shoot(2, 0, "h");
+        board.shoot(6, 9, "h");
+        board.shoot(2, 1, "d");
+        board.getField();
+/*
+        seaBoard.shoot(2, 0, "h");
+                seaBoard.shoot(2, 8, "d");
+        Arrays.deepToString(seaBoard.getField());
+          seaBoard.shoot(6, 9, "h");
+        seaBoard.shoot(2, 2, "m");
+        seaBoard.shoot(0, 0, "m");
+        seaBoard.shoot(5, 2, "m");
+        seaBoard.shoot(7, 0, "h");
+        seaBoard.shoot(7, 1, "h");
+        seaBoard.shoot(7, 2, "h");
+        seaBoard.shoot(7, 3, "d");
+        seaBoard.shoot(9, 7, "h");
+        seaBoard.shoot(8, 7, "d");
+         seaBoard.shoot(2, 1, "d");
+           Arrays.deepToString(seaBoard.getField());
+         seaBoard.check(i, j);
+              seaBoard.shoot(2, 0, "h");
+            seaBoard.shoot(2, 8, "d");
+             Arrays.deepToString(seaBoard.getField());
+              seaBoard.shoot(6, 9, "h");
+           seaBoard.shoot(2, 2, "m");
+        seaBoard.shoot(0, 0, "m");
+        seaBoard.shoot(5, 2, "m");
+                seaBoard.shoot(7, 0, "h");
+               seaBoard.shoot(7, 1, "h");
+           seaBoard.shoot(7, 2, "h");
+          seaBoard.shoot(7, 3, "d");
+        seaBoard.shoot(9, 7, "h");
+         seaBoard.shoot(8, 7, "d");
+        seaBoard.shoot(2, 1, "d");
+         Arrays.deepToString(seaBoard.getField());
+          seaBoard.check(i, j);
+*/
     }
 }
