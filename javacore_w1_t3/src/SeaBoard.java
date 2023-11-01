@@ -1,5 +1,5 @@
 public class SeaBoard {
-
+//не сдано
 
 
     private String[][] field = new String[10][10];
