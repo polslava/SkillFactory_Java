@@ -2,7 +2,7 @@ public class Main {
     public static class Adv extends Thread {
         @Override
         public void run() {
-            Advertisement ad = new Advertisement();
+            Advertisement ad = new Advertisement(); //hidden file in online IDE
             ad.show();
         }
     }
