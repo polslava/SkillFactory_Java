@@ -30,11 +30,12 @@ class Client implements Runnable {
              in = new Scanner(is);
              out = new PrintStream(os);
 
+             String username = System.getProperty("user.name");
             // читаем из сети и пишем в сеть
-            out.println("Welcome to chat!");
+            out.println("Welcome to chat! "+username);
             String input = in.nextLine();
-            while (!input.equals("bye")) {
-                server.sendAll(input ); //рассылка от сервера сообщения введённого
+            while (!input.equals("bye, "+username)) {
+                server.sendAll(username+": "+input ); //рассылка от сервера сообщения введённого
                 input = in.nextLine(); //ожидание сервером сообщения от любого клиента
             }
             socket.close();
