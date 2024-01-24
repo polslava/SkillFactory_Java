@@ -1,46 +1,51 @@
-abstract class Entity{
+public abstract class Entity implements Fighter{
 
     private String name;
     private int force;
-    private int hp = 15;
-    private boolean destroyed = false;
+    private int hp ;
     private int agility;
     private int exp;
     private int gold;
+    private boolean destroyed = false;
 
-    public Entity(String name, int force, int agility, int exp, int gold) {
-        this.name = name;
-        this.force = force;
-        this.agility = agility;
-        this.exp = exp;
-        this.gold = gold;
+    public Entity(String name, int force, int hp, int agility, int exp, int gold) {
+        this.name = name; //имя сущности
+        this.force = force; //сила сущности
+        this.hp = hp; //очки здоровья
+        this.agility = agility; // ловкость
+        this.exp = exp; //опыт
+        this.gold = gold; //золото
         System.out.println("Monster " + name + " was created");
     }
 
-    protected int getForce(){
+
+
+    //abstract public void attack(Entity entity);
+    @Override
+    public int attack() {
+        if (agility * 3 > (Math.random() * 100))
+            return hp;
+        else return  0;
+    }
+    @Override
+    public String toString() {
+        return String.format("%s здоровье:%d", getName(), getHp());
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getForce() {
         return force;
     }
 
-    abstract public void attack(Entity entity);
-
-    public int getGold() {
-        return gold;
-    }
-
-    public void setGold(int gold) {
-        this.gold = gold;
-    }
-
-    public int getExp() {
-        return exp;
-    }
-
-    public void setExp(int exp) {
-        this.exp = exp;
-    }
-
-    public int getAgility() {
-        return agility;
+    public void setForce(int force) {
+        this.force = force;
     }
 
     public int getHp() {
@@ -51,7 +56,27 @@ abstract class Entity{
         this.hp = hp;
     }
 
-    public String getName() {
-        return name;
+    public int getAgility() {
+        return agility;
+    }
+
+    public void setAgility(int agility) {
+        this.agility = agility;
+    }
+
+    public int getExp() {
+        return exp;
+    }
+
+    public void setExp(int exp) {
+        this.exp = exp;
+    }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
     }
 }
