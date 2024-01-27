@@ -1,19 +1,17 @@
 public abstract class Monster extends Entity{
-    public Monster(String name, int force) {
-        super(name, force);
-    }
-    /*private String name;
+    private String name;
     private int force;
     private int hp = 15;
     private boolean destroyed = false;
 
-    public Monster(String name, int force) {
-        this.name = name;
+    public Monster(String name) {
+        /*this.name = name;
         this.force = force;
-        System.out.println("Monster " + name + " was created");
+        System.out.println("Monster " + name + " was created");*/
+        super("Monster "+name + " was created");
     }
 
-    protected int getForce(){
+    public int getForce(){
         return force;
     }
 
@@ -21,7 +19,7 @@ public abstract class Monster extends Entity{
         return destroyed;
     }
 
-    protected boolean damage(int dhp){
+    /*protected boolean damage(int dhp){
         hp -= dhp;
         if (hp < 0){
             destroyed = true;
@@ -29,7 +27,7 @@ public abstract class Monster extends Entity{
             return true;
         }
         return false;
-    }
+    }*/
 
-    abstract public void attack(Monster monster);*/
+
 }

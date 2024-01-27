@@ -1,18 +1,40 @@
-abstract class Entity{
-    private String name;
-    private int force;
-    private int hp = 15;
-    private boolean destroyed = false;
+abstract class Entity {
+    public String name;
 
-    public Entity(String name, int force) {
+
+
+    public int force;
+    public int hp;
+    public boolean destroyed = false;
+    public Entity(String name ) {
         this.name = name;
-        this.force = force;
-        System.out.println("Monster " + name + " was created");
+        //this.force = force;
+        //this.hp = hp;
+        //System.out.println("Monster " + name + " was created");
+    }
+    protected boolean damage(int dhp){
+        hp -= dhp;
+        if (hp < 0){
+            destroyed = true;
+            System.out.println("Monster " + name + " was destroyed");
+            return true;
+        }
+        return false;
     }
 
-    protected int getForce(){
+    public boolean isDestroyed() {
+        return destroyed;
+    }
+
+    public void setDestroyed(boolean destroyed) {
+        this.destroyed = destroyed;
+    }
+    public int getForce() {
         return force;
     }
 
+    public int getHp() {
+        return hp;
+    }
     abstract public void attack(Entity entity);
 } 

@@ -1,7 +1,7 @@
-public class Zombie extends Monster implements Fighter{
+public class Zombie extends  Entity{
 
     public Zombie(String name) {
-        super(name + " the Zombie", 5);
+        super(name + " the Zombie" /*, 5*/);
     }
 
     public void growl(){
@@ -10,7 +10,7 @@ public class Zombie extends Monster implements Fighter{
 
     @Override
     public void attack(Entity entity){
-        Fighter.damage(getForce());
+        entity.damage(getForce());
         growl();
     }
 

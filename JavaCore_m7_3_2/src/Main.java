@@ -1,6 +1,6 @@
 public class Main {
 
-/*не сдано*/
+
     public static void main(String[] args) {
 /*
 
