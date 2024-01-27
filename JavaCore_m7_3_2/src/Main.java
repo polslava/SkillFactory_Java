@@ -1,6 +1,6 @@
 public class Main {
 
-
+/*СДАНО*/
     public static void main(String[] args) {
 /*
 
