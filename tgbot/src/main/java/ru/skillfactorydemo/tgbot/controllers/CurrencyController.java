@@ -1,7 +1,8 @@
 package ru.skillfactorydemo.tgbot.controllers;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RestController;
+import lombok.*;
+import org.springframework.web.bind.annotation.*;
+import ru.skillfactorydemo.tgbot.dto.ValuteCursOnDate;
 import ru.skillfactorydemo.tgbot.service.CentralRussianBankService;
 
 import java.util.List;
